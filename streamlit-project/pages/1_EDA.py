@@ -2,12 +2,21 @@
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
+from modules.nav import Navbar
 
-# Title Page
-st.header("Exploratory Data Analysis")
+
+def main():
+    Navbar()
+
+    st.title(f' Exploratory data analysis')
+
+if __name__ == '__main__':
+    main()
+
+# Add text
 st.subheader('Dataframe of Car Sales')
 # Load Data
-df = pd.read_csv('data.csv')
+df = pd.read_csv('data/data.csv')
 st.dataframe(df)
 
 # Descriptive Statistic
@@ -74,3 +83,4 @@ st.pyplot(fig=fig1,
           clear_figure=None, 
           width="content", 
           use_container_width=None)
+

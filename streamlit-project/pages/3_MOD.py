@@ -7,10 +7,20 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import r2_score, mean_squared_error
 import numpy as np
+from modules.nav import Navbar
 
+
+def main():
+    Navbar()
+
+    st.title(f'Machine Learning Model')
+
+if __name__ == '__main__':
+    main()
+    
 ##Step 1
 # Load Data
-df = pd.read_csv('data.csv')
+df = pd.read_csv('data/data.csv')
 
 # Get column names
 column_names = df[["Engine size","Year of manufacture","Mileage","Price"]].columns

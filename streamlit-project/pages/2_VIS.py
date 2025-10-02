@@ -3,12 +3,19 @@ import streamlit as st
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
+from modules.nav import Navbar
 
-# Title Page
-st.header("Visualization")
+
+def main():
+    Navbar()
+
+    st.title(f'Visualization')
+
+if __name__ == '__main__':
+    main()
 
 # Load Data
-df = pd.read_csv('data.csv')
+df = pd.read_csv('data/data.csv')
 
 # Bar Chart 2
 st.markdown('Model & Year of Manufacture by Manufacturer')
